@@ -1,23 +1,246 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jeb-Bd-6ew">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Sample View Controller - Timeline-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="sampleViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aT-l1-DbC"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRh-hA-O7H">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1aT-l1-DbC" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="5vm-Yd-VqM"/>
+                            <constraint firstItem="1aT-l1-DbC" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Evc-98-tuN"/>
+                            <constraint firstItem="1aT-l1-DbC" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="OQq-xU-MOr"/>
+                            <constraint firstItem="fRh-hA-O7H" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="WR4-SB-GUd"/>
+                            <constraint firstItem="fRh-hA-O7H" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="YVq-3W-4OE"/>
+                            <constraint firstItem="fRh-hA-O7H" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="h9Y-wa-mBP"/>
+                            <constraint firstItem="fRh-hA-O7H" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="hpX-L5-S3W"/>
+                            <constraint firstItem="1aT-l1-DbC" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="l4R-TT-r0c"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Timeline" id="33x-dg-vN8"/>
+                    <connections>
+                        <outlet property="webView" destination="fRh-hA-O7H" id="Of8-iz-dVd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="79" y="365"/>
+        </scene>
+        <!--View Controller - My Page-->
+        <scene sceneID="tT9-Ky-GAa">
+            <objects>
+                <viewController id="WXr-2r-b6m" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78q-zr-esK">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="mypage1.png" translatesAutoresizingMaskIntoConstraints="NO" id="V01-pv-pkd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="499" id="urI-Ht-7aN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V01-pv-pkd" firstAttribute="leading" secondItem="78q-zr-esK" secondAttribute="leading" type="default" id="5GE-4H-9SV"/>
+                            <constraint firstItem="V01-pv-pkd" firstAttribute="trailing" secondItem="78q-zr-esK" secondAttribute="trailing" type="default" id="BXD-yK-f9y"/>
+                            <constraint firstItem="V01-pv-pkd" firstAttribute="top" secondItem="78q-zr-esK" secondAttribute="top" constant="1" id="v2y-Rk-YED"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Page" id="1zh-JB-AOh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2a-7k-N08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="487"/>
+        </scene>
+        <!--View Controller - Title-->
+        <scene sceneID="3w2-g1-Ffs">
+            <objects>
+                <viewController title="Title" id="jeb-Bd-6ew" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bnr-2m-OCr">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" image="default@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="xCm-Fe-L4b">
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="etQ-MO-njW" appends="YES" id="07M-7s-zw8"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xCm-Fe-L4b" firstAttribute="top" secondItem="Bnr-2m-OCr" secondAttribute="top" type="default" id="Agu-H5-D4O"/>
+                            <constraint firstItem="xCm-Fe-L4b" firstAttribute="leading" secondItem="Bnr-2m-OCr" secondAttribute="leading" type="default" id="QUx-nf-ITN"/>
+                            <constraint firstItem="xCm-Fe-L4b" firstAttribute="trailing" secondItem="Bnr-2m-OCr" secondAttribute="trailing" type="default" id="pQf-rS-LYj"/>
+                            <constraint firstItem="xCm-Fe-L4b" firstAttribute="bottom" secondItem="Bnr-2m-OCr" secondAttribute="bottom" type="default" id="q5J-IL-qzz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haf-CD-owz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="etQ-MO-njW">
+                    <connections>
+                        <segue destination="hyh-XE-ljz" kind="modal" id="p05-8G-1v3"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-505" y="-752"/>
+        </scene>
+        <!--View Controller - World's Feeling-->
+        <scene sceneID="H7r-Kj-GJX">
+            <objects>
+                <viewController title="World's Feeling" id="hyh-XE-ljz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eqi-IQ-fEI">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="worldsfeeling3.png" translatesAutoresizingMaskIntoConstraints="NO" id="6hf-cy-WKR">
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ybM-fW-KIA" appends="YES" id="Enz-Pb-Yur"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6hf-cy-WKR" firstAttribute="top" secondItem="Eqi-IQ-fEI" secondAttribute="top" type="default" id="0jZ-Gb-63R"/>
+                            <constraint firstItem="6hf-cy-WKR" firstAttribute="bottom" secondItem="Eqi-IQ-fEI" secondAttribute="bottom" type="default" id="DlA-U2-2Ml"/>
+                            <constraint firstItem="6hf-cy-WKR" firstAttribute="trailing" secondItem="Eqi-IQ-fEI" secondAttribute="trailing" type="default" id="qqs-ku-TG0"/>
+                            <constraint firstItem="6hf-cy-WKR" firstAttribute="leading" secondItem="Eqi-IQ-fEI" secondAttribute="leading" type="default" id="vSH-C6-owZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgc-d0-GGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ybM-fW-KIA">
+                    <connections>
+                        <segue destination="Cam-xo-zL5" kind="modal" id="Aaw-mE-ae7"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-505" y="-68"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wMe-9s-Rqo">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="Cam-xo-zL5" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Oxw-Xw-xS9">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="Oxw-n9-JZe"/>
+                        <segue destination="WXr-2r-b6m" kind="relationship" relationship="viewControllers" id="VEs-jA-L1R"/>
+                        <segue destination="xrg-Qm-qQL" kind="relationship" relationship="viewControllers" id="cWS-dN-MUg"/>
+                        <segue destination="Vcj-qM-qed" kind="relationship" relationship="viewControllers" id="YyJ-mU-UuU"/>
+                        <segue destination="2pU-dT-R5o" kind="relationship" relationship="viewControllers" id="2BO-CP-RlN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfm-ox-7R8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79" y="-307"/>
+        </scene>
+        <!--View Controller - Ranking-->
+        <scene sceneID="yf2-Om-YbQ">
+            <objects>
+                <viewController title="Ranking" id="Vcj-qM-qed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3za-oS-J29">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ranking3.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfw-NX-s9R"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yfw-NX-s9R" firstAttribute="top" secondItem="3za-oS-J29" secondAttribute="top" type="default" id="TPO-68-2tM"/>
+                            <constraint firstItem="yfw-NX-s9R" firstAttribute="trailing" secondItem="3za-oS-J29" secondAttribute="trailing" type="default" id="Y5k-eQ-vtC"/>
+                            <constraint firstItem="yfw-NX-s9R" firstAttribute="leading" secondItem="3za-oS-J29" secondAttribute="leading" type="default" id="ehf-w4-1FD"/>
+                            <constraint firstItem="yfw-NX-s9R" firstAttribute="bottom" secondItem="3za-oS-J29" secondAttribute="bottom" type="default" id="hv1-gk-SBN"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ranking" id="vap-JR-QDy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Suh-CY-2dc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="-728"/>
+        </scene>
+        <!--View Controller - Setting-->
+        <scene sceneID="5mN-kS-d5U">
+            <objects>
+                <viewController id="2pU-dT-R5o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jjh-Fe-n4h">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="setting.png" translatesAutoresizingMaskIntoConstraints="NO" id="DZF-nP-Hjx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="499" id="ocU-Og-ZoI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DZF-nP-Hjx" firstAttribute="top" secondItem="jjh-Fe-n4h" secondAttribute="top" constant="1" id="Gjk-yr-Fld"/>
+                            <constraint firstItem="DZF-nP-Hjx" firstAttribute="leading" secondItem="jjh-Fe-n4h" secondAttribute="leading" type="default" id="HEF-EX-zyF"/>
+                            <constraint firstItem="DZF-nP-Hjx" firstAttribute="trailing" secondItem="jjh-Fe-n4h" secondAttribute="trailing" type="default" id="xOk-2w-LWD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setting" id="GgV-Ue-4ag"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTm-t5-sCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="870" y="-573"/>
+        </scene>
+        <!--View Controller - Glyphs-->
+        <scene sceneID="ST7-yA-SNX">
+            <objects>
+                <viewController id="xrg-Qm-qQL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1H6-i1-RGb">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="input_1-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="MsI-S7-NDm">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="499" id="7j5-82-Nj3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MsI-S7-NDm" firstAttribute="trailing" secondItem="1H6-i1-RGb" secondAttribute="trailing" type="default" id="aHm-d8-ICt"/>
+                            <constraint firstItem="MsI-S7-NDm" firstAttribute="top" secondItem="1H6-i1-RGb" secondAttribute="top" constant="1" id="gf2-nY-J68"/>
+                            <constraint firstItem="MsI-S7-NDm" firstAttribute="leading" secondItem="1H6-i1-RGb" secondAttribute="leading" type="default" id="zjZ-tE-W7f"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Glyphs" image="initial_simple.png" id="t2f-YF-RRf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kti-fo-rmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="156"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="default@2x.png" width="640" height="960"/>
+        <image name="initial_simple.png" width="32" height="32"/>
+        <image name="input_1-1.png" width="879" height="1368"/>
+        <image name="mypage1.png" width="639" height="996"/>
+        <image name="ranking3.png" width="16" height="16"/>
+        <image name="setting.png" width="634" height="988"/>
+        <image name="worldsfeeling3.png" width="16" height="16"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

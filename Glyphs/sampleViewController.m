@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSURLRequest* req = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://glyphs.jp"]];
+    [webView loadRequest:req];
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +28,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload { }
+// web を解放
+- (void)dealloc {
+    webView.delegate = nil; }
 @end

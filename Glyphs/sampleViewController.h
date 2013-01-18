@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface sampleViewController : UIViewController
+@interface sampleViewController : UIViewController{
+    IBOutlet UIWebView *webView;
+}
 
 @end
