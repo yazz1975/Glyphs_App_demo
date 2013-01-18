@@ -4,17 +4,123 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
+        <!--View Controller - input glyphs-->
+        <scene sceneID="sor-FA-Yug">
+            <objects>
+                <viewController title="input glyphs" id="rbh-La-iPY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="haP-Q7-TqL">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="glyphs.png" translatesAutoresizingMaskIntoConstraints="NO" id="v0g-mc-Ndw">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="516" id="tVz-qa-PNR"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8dv-JR-8Yr" appends="YES" id="yaC-34-yJa"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v0g-mc-Ndw" firstAttribute="leading" secondItem="haP-Q7-TqL" secondAttribute="leading" type="default" id="0fc-0H-YPV"/>
+                            <constraint firstItem="v0g-mc-Ndw" firstAttribute="top" secondItem="haP-Q7-TqL" secondAttribute="top" type="default" id="HY9-32-3l7"/>
+                            <constraint firstItem="v0g-mc-Ndw" firstAttribute="trailing" secondItem="haP-Q7-TqL" secondAttribute="trailing" type="default" id="cPz-fz-DC4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Zv-O2-tOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8dv-JR-8Yr">
+                    <connections>
+                        <segue destination="MlM-h5-pPo" kind="modal" id="qxR-2X-fFE"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1250" y="140"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HxW-uV-9aE">
+            <objects>
+                <viewController id="DXo-Ao-nam" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nPc-3j-j06">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="input_1-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="sIO-uU-zbz">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="505" id="NeL-8l-BVb"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LSz-sp-IHE" appends="YES" id="CQR-jZ-wtn"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sIO-uU-zbz" firstAttribute="leading" secondItem="nPc-3j-j06" secondAttribute="leading" type="default" id="M7X-QQ-smN"/>
+                            <constraint firstItem="sIO-uU-zbz" firstAttribute="top" secondItem="nPc-3j-j06" secondAttribute="top" type="default" id="xSe-f4-ttD"/>
+                            <constraint firstItem="sIO-uU-zbz" firstAttribute="trailing" secondItem="nPc-3j-j06" secondAttribute="trailing" type="default" id="zWD-OH-E0P"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfc-Du-3As" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LSz-sp-IHE">
+                    <connections>
+                        <segue destination="rbh-La-iPY" kind="modal" id="QbH-Wv-7kB"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="862" y="775"/>
+        </scene>
+        <!--View Controller - input final-->
+        <scene sceneID="xin-0s-vPe">
+            <objects>
+                <viewController title="input final" id="MlM-h5-pPo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VpL-8n-BRW">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="input4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z2Q-AS-rUg">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="548" id="cvZ-ay-CLU"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Prs-I9-LQo" appends="YES" id="E81-ss-x0y"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z2Q-AS-rUg" firstAttribute="leading" secondItem="VpL-8n-BRW" secondAttribute="leading" type="default" id="1sL-qN-L1g"/>
+                            <constraint firstItem="Z2Q-AS-rUg" firstAttribute="trailing" secondItem="VpL-8n-BRW" secondAttribute="trailing" type="default" id="g2U-Ue-nuQ"/>
+                            <constraint firstItem="Z2Q-AS-rUg" firstAttribute="top" secondItem="VpL-8n-BRW" secondAttribute="top" constant="-4" id="mUf-Xt-FMy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A67-eP-eli" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Prs-I9-LQo">
+                    <connections>
+                        <segue destination="Cam-xo-zL5" kind="modal" id="qLe-Mc-1yX"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1333" y="823"/>
+        </scene>
         <!--Sample View Controller - Timeline-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="sampleViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aT-l1-DbC"/>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRh-hA-O7H">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -46,10 +152,14 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="mypage1.png" translatesAutoresizingMaskIntoConstraints="NO" id="V01-pv-pkd">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="mypage1.png" translatesAutoresizingMaskIntoConstraints="NO" id="V01-pv-pkd">
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="499" id="urI-Ht-7aN"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="OUg-vO-vnG" appends="YES" id="IuJ-3v-sUT"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -62,6 +172,11 @@
                     <tabBarItem key="tabBarItem" title="My Page" id="1zh-JB-AOh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U2a-7k-N08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OUg-vO-vnG">
+                    <connections>
+                        <segue destination="Cam-xo-zL5" kind="modal" id="974-Ti-U13"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="496" y="487"/>
         </scene>
@@ -108,6 +223,9 @@
                         <subviews>
                             <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="worldsfeeling3.png" translatesAutoresizingMaskIntoConstraints="NO" id="6hf-cy-WKR">
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="548" id="TVE-6C-L2q"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ybM-fW-KIA" appends="YES" id="Enz-Pb-Yur"/>
                                 </connections>
@@ -115,8 +233,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6hf-cy-WKR" firstAttribute="top" secondItem="Eqi-IQ-fEI" secondAttribute="top" type="default" id="0jZ-Gb-63R"/>
-                            <constraint firstItem="6hf-cy-WKR" firstAttribute="bottom" secondItem="Eqi-IQ-fEI" secondAttribute="bottom" type="default" id="DlA-U2-2Ml"/>
+                            <constraint firstItem="6hf-cy-WKR" firstAttribute="top" secondItem="Eqi-IQ-fEI" secondAttribute="top" constant="-28" id="Qc5-eW-cvg"/>
                             <constraint firstItem="6hf-cy-WKR" firstAttribute="trailing" secondItem="Eqi-IQ-fEI" secondAttribute="trailing" type="default" id="qqs-ku-TG0"/>
                             <constraint firstItem="6hf-cy-WKR" firstAttribute="leading" secondItem="Eqi-IQ-fEI" secondAttribute="leading" type="default" id="vSH-C6-owZ"/>
                         </constraints>
@@ -161,14 +278,17 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ranking3.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfw-NX-s9R"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ranking3.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfw-NX-s9R">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="499" id="Ah2-PP-rK2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yfw-NX-s9R" firstAttribute="top" secondItem="3za-oS-J29" secondAttribute="top" type="default" id="TPO-68-2tM"/>
+                            <constraint firstItem="yfw-NX-s9R" firstAttribute="top" secondItem="3za-oS-J29" secondAttribute="top" constant="1" id="FbW-kY-09J"/>
                             <constraint firstItem="yfw-NX-s9R" firstAttribute="trailing" secondItem="3za-oS-J29" secondAttribute="trailing" type="default" id="Y5k-eQ-vtC"/>
                             <constraint firstItem="yfw-NX-s9R" firstAttribute="leading" secondItem="3za-oS-J29" secondAttribute="leading" type="default" id="ehf-w4-1FD"/>
-                            <constraint firstItem="yfw-NX-s9R" firstAttribute="bottom" secondItem="3za-oS-J29" secondAttribute="bottom" type="default" id="hv1-gk-SBN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ranking" id="vap-JR-QDy"/>
@@ -202,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTm-t5-sCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="-573"/>
+            <point key="canvasLocation" x="944" y="-545"/>
         </scene>
         <!--View Controller - Glyphs-->
         <scene sceneID="ST7-yA-SNX">
@@ -212,38 +332,64 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="input_1-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="MsI-S7-NDm">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="login1.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Lr-gF-IHL">
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="499" id="7j5-82-Nj3"/>
+                                    <constraint firstAttribute="height" constant="499" id="OEM-P2-pMT"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yEV-WU-TOH" appends="YES" id="u6V-KA-q4t"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MsI-S7-NDm" firstAttribute="trailing" secondItem="1H6-i1-RGb" secondAttribute="trailing" type="default" id="aHm-d8-ICt"/>
-                            <constraint firstItem="MsI-S7-NDm" firstAttribute="top" secondItem="1H6-i1-RGb" secondAttribute="top" constant="1" id="gf2-nY-J68"/>
-                            <constraint firstItem="MsI-S7-NDm" firstAttribute="leading" secondItem="1H6-i1-RGb" secondAttribute="leading" type="default" id="zjZ-tE-W7f"/>
+                            <constraint firstItem="3Lr-gF-IHL" firstAttribute="top" secondItem="1H6-i1-RGb" secondAttribute="top" constant="5" id="Iw4-04-9Xx"/>
+                            <constraint firstItem="3Lr-gF-IHL" firstAttribute="trailing" secondItem="1H6-i1-RGb" secondAttribute="trailing" type="default" id="WRS-JM-9M3"/>
+                            <constraint firstItem="3Lr-gF-IHL" firstAttribute="leading" secondItem="1H6-i1-RGb" secondAttribute="leading" type="default" id="zXj-VI-blh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Glyphs" image="initial_simple.png" id="t2f-YF-RRf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kti-fo-rmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yEV-WU-TOH">
+                    <connections>
+                        <segue destination="DXo-Ao-nam" kind="modal" id="lbj-aC-3Wu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="862" y="156"/>
+            <point key="canvasLocation" x="862" y="110"/>
         </scene>
     </scenes>
     <resources>
         <image name="default@2x.png" width="640" height="960"/>
+        <image name="glyphs.png" width="633" height="990"/>
         <image name="initial_simple.png" width="32" height="32"/>
+        <image name="input4.png" width="635" height="1097"/>
         <image name="input_1-1.png" width="879" height="1368"/>
+        <image name="login1.png" width="495" height="753"/>
         <image name="mypage1.png" width="639" height="996"/>
-        <image name="ranking3.png" width="16" height="16"/>
+        <image name="ranking3.png" width="618" height="968"/>
         <image name="setting.png" width="634" height="988"/>
-        <image name="worldsfeeling3.png" width="16" height="16"/>
+        <image name="worldsfeeling3.png" width="634" height="963"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="sampleViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/sampleViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="974-Ti-U13"/>
+    </inferredMetricsTieBreakers>
 </document>
